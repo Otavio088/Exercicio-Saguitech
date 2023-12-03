@@ -71,5 +71,6 @@
 
 #printNF p {
     font-size: 22px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
