@@ -1,0 +1,81 @@
+<!--    Desenvolva uma pagina HTML com Javascript. Que leia os dados necessários para 
+        emissão de uma nota fiscal de serviço, calcule os impostos e gere na própria 
+        página a nota fiscal com os dados inseridos.    -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nota Fiscal de Serviço</title>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    </head>
+    <body>
+        <form id="formNF">
+            <div class="alinhar">
+                <!--Dados do remetente-->
+                <div class="campos">
+                    <h2>Dados Remetente</h2>
+                    <label for="nomeRemetente">Nome: </label>
+                    <input type="text" id="nomeRemetente" required><br>
+
+                    <label for="cnpjRemetente">CNPJ: </label>
+                    <input type="text" id="cnpjRemetente" required><br>
+                    
+                    <label for="ieRemetente">Inscrição Estadual: </label>
+                    <input type="text" id="ieRemetente" required><br>
+                    
+                    <label for="endRemetente">Endereço: </label>
+                    <input type="text" id="endRemetente" required><br>
+                </div>
+                <!--Dados do destinatário-->
+                <div class="campos">
+                    <h2>Dados Destinatário</h2>
+                    <label for="nomeDestinatario">Nome: </label>
+                    <input type="text" id="nomeDestinatario" required><br>
+                    
+                    <label for="cnpjDestinatario">CNPJ: </label>
+                    <input type="text" id="cnpjDestinatario" required><br>
+                    
+                    <label for="ieDestinatario">Inscrição Estadual: </label>
+                    <input type="text" id="ieDestinatario" required><br>
+                    
+                    <label for="endDestinatario">Endereço: </label>
+                    <input type="text" id="endDestinatario" required><br>
+                </div>
+                <div class="campos">
+                    <!--Dados do produto-->
+                    <h2>Produto</h2>
+                    <label for="qtdProduto" required>Quantidade produto:</label>
+                    <input type="text" id="qtdProduto"><br>
+                
+                    <label for="precoProduto" required>Preço Unitario:</label>
+                    <input type="text" id="precoProduto"><br>
+                
+                    <label for="descProduto">Descrição Produto:</label>
+                    <textarea type="text" id="descProduto" rows="5" cols="30"></textarea><br>
+                </div>
+            </div>
+            <!--envia-->
+            <div class="botao">
+                <button type="button" onclick="geraNF()">GERAR</button>
+            </div>
+        </form>
+
+        <!--mostra-->
+        <div id="printNF" class="printf">
+            <div>
+                <p><span id="dados" style="display: flex; text-align: center; "> </span></p>
+                <p><span id="detalhes" style="display: flex; text-align: center; justify-content: center;"> </span></p>
+                <p><strong></strong> <span id="remetente"></span></p>
+                <p><strong></strong> <span id="destinatario"></span></p>
+                <p><strong></strong> <span id="produto"></span></p>
+                <p><strong></strong> <span id="impostosTotais"></span></p>
+                <p><strong></strong> <span id="valorTotal"></span></p>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
