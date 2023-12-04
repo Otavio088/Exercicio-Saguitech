@@ -1,4 +1,4 @@
-function geraNF() {
+function gerarNF() {
 
     //recebe dados
     let remetente = {
@@ -25,7 +25,7 @@ function geraNF() {
 
     if (camposValidos) {
 
-    // calcula imposto (Ex.: 8% do valor total)
+    //calcula imposto (Ex.: 8% do valor total)
     let valorTotal = produto.quantidade * produto.valorUnitario;
     let impostosTotais = 0.08 * valorTotal;
 
@@ -41,7 +41,6 @@ function geraNF() {
     //mostra graças ao display block
     document.getElementById('printNF').style.display = 'block';
     
-    // Adicione a classe à div após clicar no botão
     document.getElementById('printNF').classList.add('show');
     } else {
         alert("Por favor, preencha todos os campos para gerar a nota fiscal!");

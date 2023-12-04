@@ -39,7 +39,8 @@
     height: 40px;
     cursor: pointer;
     font-size: 15px;
-    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(211, 219, 228);
 }
 
 .printf {
